@@ -1,0 +1,22 @@
+#first {
+    float: left;
+    width: 15%;
+    height: 100%;
+    text-align: center;
+}
+
+#contents {
+    background-color: antiquewhite;
+    float: left;
+    width: 70%;
+    height: 100%;
+    text-align: center;    
+    word-break: break-all;
+}
+
+#third {
+    float: left;
+    width: 15%;
+    height: 100%;
+    text-align: center;
+}
