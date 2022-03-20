@@ -6,6 +6,10 @@ To run the web service:
 ```
 docker build -f path/to/Dockerfile.txt -t fib_project:v1 .
 ```
+**(Recommended)** or go to the parent directory of Dockerfile.txt in terminal, run the following command
+```
+docker build -t fib_project:v1 .
+```
 
 2. Run the docker image, run the following command in terminal
 ```
