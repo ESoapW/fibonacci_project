@@ -16,7 +16,7 @@ docker build -t fib_project:v1 .
 docker run -p 3000:3000 -it fib_project:v1
 ```
 
-3. The docker image is currently ran as a container. This is because we need to install Node Version Manager, which is very difficult to install in the Dockerfile, because it requires to update .bashrc file. Run the following command in terminal, the terminal is attached to the docker container now.
+3. The docker image is currently ran as a container. Run the following command in terminal, the terminal should be attached to the docker container now.
 ```
 cd fibonacci_project/project/
 
@@ -28,5 +28,6 @@ npm install
 npm run compile
 npm start
 ```
+P.S. This step is necessary since we need to install Node Version Manager, which is very difficult to install by simply running the Dockerfile, because it requires to update .bashrc file. 
 
 4. Enter http://localhost:3000/ in browser, you should see the service running.
