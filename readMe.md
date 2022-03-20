@@ -1,7 +1,28 @@
-# Fibonacci web service project
+# NUSMOC_MAY_2022_Wei Yixin_fibonacci
 
-Name: Wei Yixin
+To run the web service:
 
-1. project folder contains the main project, refer to readMe.md in /project to see details
-2. docker folder contains the dockerfile setup
-3. Fib_java folder contains the Java implementation of challenge 1
+1. Download Dockerfile.txt, run the following command in terminal
+```
+docker build -f path/to/Dockerfile.txt -t fib_project:v1 .
+```
+
+2. Run the docker image, run the following command in terminal
+```
+docker run -p 3000:3000 -it fib_project:v1
+```
+
+3. The docker image is currently ran as a container. This is because we need to install Node Version Manager, which is very difficult to install in the Dockerfile, because it requires to update .bashrc file. Run the following command in terminal, the terminal is attached to the docker container now.
+```
+cd fibonacci_project/project/
+
+nvm install 10
+nvm alias default 10
+npm install -g npm@6
+
+npm install
+npm run compile
+npm start
+```
+
+4. Enter http://localhost:3000/ in browser, you should see the service running.
